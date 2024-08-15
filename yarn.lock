@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@babel/runtime@^7.18.9":
+  version "7.25.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.25.0.tgz#3af9a91c1b739c569d5d80cc917280919c544ecb"
+  integrity sha512-7dRy4DwXwtzBrPbZflqxnvfxLF8kdZXPkhymtDeFoFqE6ldzjQFgYTtYIFARcLEYDrqfBfYcZt1WqFxRoyC9Rw==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@esbuild/aix-ppc64@0.21.5":
   version "0.21.5"
   resolved "https://registry.yarnpkg.com/@esbuild/aix-ppc64/-/aix-ppc64-0.21.5.tgz#c7184a326533fcdf1b8ee0733e21c713b975575f"
@@ -209,12 +216,33 @@
   dependencies:
     tslib "^2.4.0"
 
+"@twa-dev/mark42@^0.0.38":
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/@twa-dev/mark42/-/mark42-0.0.38.tgz#ee0e33dcd6298962e04d7c8484222a963a0b2acd"
+  integrity sha512-p1Fbr78lrhXSQWsCIY/UoKJfUbiVfe1tDoHKebSY2/WNbZk/Xl6r/Knvk7lGTUz7m0Ky0DEmmnXMLx8Ohs4NWA==
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@twa-dev/sdk" "^6.7.1"
+    classnames "^2.3.1"
+
 "@twa-dev/sdk@7.8.0":
   version "7.8.0"
   resolved "https://registry.yarnpkg.com/@twa-dev/sdk/-/sdk-7.8.0.tgz#a21d3791b836717057fe6045a8e37d1bcfde3c1b"
   integrity sha512-fVnTSqef6UL2cUU/li8z+KEnswBsvVqA1yjNYBKTy4BRcOs6TVjqHMUgVqn9PJJqyCN4Z0QWyA0y0nprYRVvCw==
   dependencies:
     "@twa-dev/types" "^7.8.0"
+
+"@twa-dev/sdk@^6.7.1":
+  version "6.9.2"
+  resolved "https://registry.yarnpkg.com/@twa-dev/sdk/-/sdk-6.9.2.tgz#1c5a7569db954763bc191509c9d53ba2953a8b2e"
+  integrity sha512-xLqqtJfRtFyvM8arG8eoAtdY2GTdVzDdl64M3blHheY2OqON5QTG+WYUs5EZ+gPFXwxDxRCYTDbOJv1gycJqdA==
+  dependencies:
+    "@twa-dev/types" "^6.9.0"
+
+"@twa-dev/types@^6.9.0":
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/@twa-dev/types/-/types-6.9.0.tgz#5f978e63dcb8ec507ae2b035774ff568c5ebb69a"
+  integrity sha512-hBkIuJgVtkLAPPhKsNfgyBpgS+15spzUScy5jgpfPJPqXPaaUVDTaWHbeEUU+lUgHmryeQjWyz+UjS7987Pyaw==
 
 "@twa-dev/types@^7.8.0":
   version "7.8.0"
@@ -451,6 +479,11 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+classnames@^2.3.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.5.1.tgz#ba774c614be0f016da105c858e7159eae8e7687b"
+  integrity sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==
 
 color-convert@^2.0.1:
   version "2.0.1"
@@ -1152,6 +1185,11 @@ readable-stream@^3.6.0:
     inherits "^2.0.3"
     string_decoder "^1.1.1"
     util-deprecate "^1.0.1"
+
+regenerator-runtime@^0.14.0:
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.1.tgz#356ade10263f685dda125100cd862c1db895327f"
+  integrity sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==
 
 resolve@^1.22.8:
   version "1.22.8"

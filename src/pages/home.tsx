@@ -1,8 +1,20 @@
 import React from 'react';
 import WebApp from '@twa-dev/sdk';
 import { MainButton } from '@twa-dev/sdk/react';
+import {
+  AppearanceProvider,
+  InitialsAvatar,
+  useColorScheme,
+  usePlatform,
+  useTheme,
+} from '@twa-dev/mark42';
+import { MyButton } from '../components/Button';
 
 const Home = () => {
+  const theme = useTheme();
+  const colorScheme = useColorScheme();
+  const platform = usePlatform();
+
   const shareToStory = () => {
     if (WebApp) {
       WebApp.shareToStory(
@@ -21,6 +33,14 @@ const Home = () => {
     <div>
       <h1>Home Page</h1>
       <p>Welcome to the Home page!</p>
+      <InitialsAvatar
+        entityId={1234567890}
+        size={80}
+        entityName='John Doe'
+        theme='apple'
+        className='MyAvatar'
+        style={{ marginBottom: 10 }}
+      />
       <MainButton text='Submit' onClick={() => alert('submitted')} />
       <button
         onClick={() => {
@@ -35,6 +55,20 @@ const Home = () => {
       <div>
         <button onClick={shareToStory}>分享</button>
       </div>
+
+      <AppearanceProvider
+        theme={theme}
+        colorScheme={colorScheme}
+        platform={platform}
+      >
+        <MyButton
+          onClick={() => {
+            console.log('click my button');
+          }}
+        >
+          My Button
+        </MyButton>
+      </AppearanceProvider>
     </div>
   );
 };

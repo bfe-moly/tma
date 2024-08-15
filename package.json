@@ -6,6 +6,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@twa-dev/mark42": "0.0.38",
     "@twa-dev/sdk": "7.8.0",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
