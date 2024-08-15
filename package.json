@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "mako build --mode development --watch",
+    "build": "mako build --mode production"
+  },
+  "dependencies": {
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/less": "^3.0.6",
+    "@umijs/mako": "0.8.0",
+    "less": "4.2.0",
+    "typescript": "5.5.4"
+  }
+}
