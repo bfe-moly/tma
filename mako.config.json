@@ -1,3 +1,4 @@
 {
-  "hash": true
+  "hash": true,
+  "publicPath": "/tma/"
 }
