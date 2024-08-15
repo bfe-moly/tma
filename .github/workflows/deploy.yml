@@ -1,13 +1,9 @@
-name: deploy_when_commit_to_master
+name: deploy_github_pages
 
 on:
   push:
     branches:
       - master
-
-env:
-  VITE_API_DOMAIN: ${{ secrets.VITE_API_DOMAIN }}
-  VITE_MORALIS_API_KEY: ${{ secrets.VITE_MORALIS_API_KEY }}
 
 jobs:
   build:
@@ -22,7 +18,7 @@ jobs:
       - name: setup node env
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
 
       - name: Build Project
         run: yarn && yarn build
