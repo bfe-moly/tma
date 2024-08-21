@@ -1,11 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "dev": "vite --host",
+    "dev": "vite --host --port 2024",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd-mobile": "5.37.1",
+    "antd-mobile-icons": "^0.3.0",
     "@twa-dev/mark42": "0.0.38",
     "@twa-dev/sdk": "7.8.0",
     "@types/react": "^18.3.2",

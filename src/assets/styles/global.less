@@ -7,3 +7,26 @@
     }
   }
 }
+
+.App {
+  text-align: left;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    padding: 20px 20px 50px 20px;
+    flex: 1;
+    h1 {
+      padding-bottom: 20px;
+    }
+  }
+  .bottom {
+    flex: 0;
+    border-top: solid 1px var(--adm-color-border);
+    background: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}
