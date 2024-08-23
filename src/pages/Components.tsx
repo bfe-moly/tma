@@ -1,9 +1,49 @@
+import { InitialsAvatar } from '@twa-dev/mark42';
+import WebApp from '@twa-dev/sdk';
+import { Button, Card, Space } from 'antd-mobile';
 import React from 'react';
+import { DemoBlock } from '../components/DemoBlock';
 
 function Components() {
+  const shareToStory = () => {
+    if (WebApp) {
+      WebApp.shareToStory(
+        'https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png',
+        {
+          text: 'text',
+          widget_link: {
+            name: 'name',
+            url: 'https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png',
+          },
+        }
+      );
+    }
+  };
+
   return (
-    <div>
-      <h2>Components</h2>
+    <div className='componets-container'>
+      <h1>TG 示例小程序 - Components demo</h1>
+      <Card title='avatar'>
+        <InitialsAvatar
+          entityId={1234567890}
+          size={80}
+          entityName='John Doe'
+          theme='apple'
+          className='MyAvatar'
+          style={{ marginBottom: 10 }}
+        />
+      </Card>
+
+      <Card title='card'>
+        <Space direction='vertical'>
+          <Button color='primary'>授权</Button>
+          <Button color='primary' onClick={shareToStory}>
+            分享
+          </Button>
+        </Space>
+      </Card>
+
+      {/* <DemoBlock title='DemoBlock'>DemoBlock</DemoBlock> */}
     </div>
   );
 }
