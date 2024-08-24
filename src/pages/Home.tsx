@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import WebApp from '@twa-dev/sdk';
 import { useColorScheme, usePlatform, useTheme } from '@twa-dev/mark42';
 import { Button, Card, Space } from 'antd-mobile';
@@ -27,6 +27,28 @@ const Home = () => {
   function expandWebview() {
     WebApp.expand();
   }
+
+  function setViewportData() {
+    const sizeEl = document.getElementById(
+      'viewport-params-size'
+    ) as HTMLElement;
+    sizeEl!.innerText =
+      'width: ' +
+      window.innerWidth +
+      ' x ' +
+      'height: ' +
+      WebApp.viewportStableHeight;
+
+    const expandEl = document.querySelector(
+      '#viewport-params-expand'
+    ) as HTMLElement;
+    expandEl!.innerText =
+      'Is Expanded: ' + (WebApp.isExpanded ? 'true' : 'false');
+  }
+
+  useEffect(() => {
+    setViewportData();
+  }, []);
 
   return (
     <div>
