@@ -2,7 +2,6 @@ import { InitialsAvatar } from '@twa-dev/mark42';
 import WebApp from '@twa-dev/sdk';
 import { Button, Card, Space } from 'antd-mobile';
 import React from 'react';
-import { DemoBlock } from '../components/DemoBlock';
 
 function Components() {
   const shareToStory = () => {
@@ -22,28 +21,29 @@ function Components() {
 
   return (
     <div className='componets-container'>
-      <h1>TG 示例小程序 - Components demo</h1>
-      <Card title='avatar'>
-        <InitialsAvatar
-          entityId={1234567890}
-          size={80}
-          entityName='John Doe'
-          theme='apple'
-          className='MyAvatar'
-          style={{ marginBottom: 10 }}
-        />
-      </Card>
+      <h1 className='tc my20'>TG 示例小程序 - Components</h1>
 
-      <Card title='card'>
-        <Space direction='vertical'>
-          <Button color='primary'>授权</Button>
-          <Button color='primary' onClick={shareToStory}>
-            分享
-          </Button>
-        </Space>
-      </Card>
+      <Space direction='vertical' block>
+        <Card title='avatar'>
+          <InitialsAvatar
+            entityId={1234567890}
+            size={80}
+            entityName='John Doe'
+            theme='apple'
+            className='MyAvatar'
+            style={{ marginBottom: 10 }}
+          />
+        </Card>
 
-      {/* <DemoBlock title='DemoBlock'>DemoBlock</DemoBlock> */}
+        <Card title='Buttons'>
+          <Space direction='vertical'>
+            <Button color='primary'>授权</Button>
+            <Button color='primary' onClick={shareToStory}>
+              分享
+            </Button>
+          </Space>
+        </Card>
+      </Space>
     </div>
   );
 }

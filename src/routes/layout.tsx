@@ -4,7 +4,7 @@ import '../assets/styles/global.less';
 
 function Layout() {
   return (
-    <div>
+    <div className='layout'>
       <Outlet />
     </div>
   );
