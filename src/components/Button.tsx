@@ -1,11 +1,12 @@
 import {
-  useColorScheme,
-  useTheme,
-  usePlatform,
   AppearanceProvider,
-} from '@twa-dev/mark42';
-import React from 'react';
+  useColorScheme,
+  usePlatform,
+  useTheme,
+} from "@twa-dev/mark42";
+import { Button } from "antd-mobile";
+import React from "react";
 
 export const MyButton = (props: any) => {
-  return <button {...props} />;
+  return <Button {...props} />;
 };
