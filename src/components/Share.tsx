@@ -10,12 +10,12 @@ export default (props: any) => {
   const handleShare = async () => {
     setIsSharing(true);
     try {
-      WebApp.showAlert("Hey there!");
+      // WebApp.showAlert("Hey there!");
       try {
-        // 这里替换为您想要分享的文本，包括小程序的链接
         const shareText =
           "Check out this awesome Telegram Mini App: [Your Mini App Link Here]";
-        await WebApp.shareToStory(shareText);
+        // await WebApp.shareToStory(shareText);
+        WebApp.switchInlineQuery("", ["users", "groups", "channels"]);
         console.log("分享成功");
       } catch (error) {
         console.error("分享失败:", error);
@@ -36,7 +36,7 @@ export default (props: any) => {
   return (
     <Button onClick={handleShare}>
       {/* <Button onClick={test1}> */}
-      {isSharing ? "分享中..." : "分享到 Telegram2"}
+      {isSharing ? "分享中..." : "分享到 Telegram 用户、群组或频道"}
     </Button>
   );
 };
