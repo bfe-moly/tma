@@ -1,13 +1,13 @@
-import { TabBar } from "antd-mobile";
+import { TabBar } from 'antd-mobile';
 import {
   AppOutline,
   AppstoreOutline,
   TeamOutline,
   TruckOutline,
-} from "antd-mobile-icons";
-import React from "react";
-import type { FC } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+} from 'antd-mobile-icons';
+import React from 'react';
+import type { FC } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Bottom: FC = () => {
   const navigate = useNavigate();
@@ -20,24 +20,24 @@ export const Bottom: FC = () => {
 
   const tabs = [
     {
-      key: "/",
-      title: "首页",
+      key: '/',
+      title: '首页',
       icon: <AppOutline />,
     },
 
     {
-      key: "/components",
-      title: "组件",
+      key: '/components',
+      title: '组件',
       icon: <AppstoreOutline />,
     },
     {
-      key: "/api",
-      title: "API",
+      key: '/api',
+      title: 'API',
       icon: <TruckOutline />,
     },
     {
-      key: "/about",
-      title: "关于",
+      key: '/about',
+      title: '关于',
       icon: <TeamOutline />,
     },
   ];
