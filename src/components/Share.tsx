@@ -34,7 +34,7 @@ export default (props: any) => {
   // };
 
   return (
-    <Button onClick={handleShare}>
+    <Button color="success" onClick={handleShare}>
       {/* <Button onClick={test1}> */}
       {isSharing ? '分享中...' : '分享到 Telegram 用户、群组或频道'}
     </Button>

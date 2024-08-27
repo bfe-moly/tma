@@ -24,41 +24,19 @@ const Home = () => {
     }
   }
 
-  function expandWebview() {
-    WebApp.expand();
-  }
-
-  function setViewportData() {
-    const sizeEl = document.getElementById(
-      'viewport-params-size'
-    ) as HTMLElement;
-    sizeEl!.innerText =
-      'width: ' +
-      window.innerWidth +
-      ' x ' +
-      'height: ' +
-      WebApp.viewportStableHeight;
-
-    const expandEl = document.querySelector(
-      '#viewport-params-expand'
-    ) as HTMLElement;
-    expandEl!.innerText =
-      'Is Expanded: ' + (WebApp.isExpanded ? 'true' : 'false');
-  }
-
-  useEffect(() => {
-    setViewportData();
-  }, []);
-
   return (
     <div>
-      <h1 className='tc my20'>TG 示例小程序</h1>
-      <div id='viewport'></div>
-      <div id='viewport-params-size'></div>
-      <div id='viewport-params-expand'></div>
+      <h1 className="tc my20">TG 示例小程序</h1>
+      <div id="viewport"></div>
+      <div id="viewport-params-size">
+        {`width: ${window.innerWidth} x height: ${WebApp.viewportStableHeight}`}
+      </div>
+      <div id="viewport-params-expand">
+        {`Is Expanded: ${WebApp.isExpanded ? 'true' : 'false'}`}
+      </div>
 
-      <Space direction='vertical' block>
-        <Card title='BasicInfo'>
+      <Space direction="vertical" block>
+        <Card title="BasicInfo">
           <div>
             <p>theme: {theme}</p>
             <p>colorScheme: {colorScheme}</p>
@@ -66,12 +44,12 @@ const Home = () => {
             <p>version: {WebApp.version}</p>
           </div>
         </Card>
-        <Card title='Buttons'>
-          <Space direction='vertical'>
-            <Button color='primary' onClick={toggleMainButton}>
+        <Card title="Buttons">
+          <Space direction="vertical">
+            <Button color="primary" onClick={toggleMainButton}>
               toggle MainButton
             </Button>
-            <Button color='success' onClick={expandWebview}>
+            <Button color="success" onClick={() => WebApp.expand()}>
               放大 Webview
             </Button>
           </Space>

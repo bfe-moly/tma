@@ -1,21 +1,21 @@
-import { InitialsAvatar } from "@twa-dev/mark42";
-import WebApp from "@twa-dev/sdk";
-import { Button, Card, Space } from "antd-mobile";
-import React from "react";
-import Share from "../components/Share";
+import { InitialsAvatar } from '@twa-dev/mark42';
+import WebApp from '@twa-dev/sdk';
+import { Button, Card, Space } from 'antd-mobile';
+import React from 'react';
+import Share from '../components/Share';
 
 function Components() {
   const shareToStory = () => {
     if (WebApp) {
       WebApp.shareToStory(
-        "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png",
+        'https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png',
         {
-          text: "text",
+          text: 'text',
           widget_link: {
-            name: "name",
-            url: "https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png",
+            name: 'name',
+            url: 'https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png',
           },
-        }
+        },
       );
     }
   };
@@ -40,7 +40,7 @@ function Components() {
           <Space direction="vertical">
             <Button color="primary">授权</Button>
             <Button color="primary" onClick={shareToStory}>
-              分享
+              分享到故事 shareToStory
             </Button>
             <Share />
           </Space>
