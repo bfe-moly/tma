@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.sql": "sql",
+        "*.arb": "json",
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "*.html": "html",
+        "*.vue": "vue",
+        "*.ttss": "css",
+        "*.sjs": "javascript",
+        "*.ttml": "xml",
+        "*.wxml": "ttml",
+        "*.sk": "ttml"
+    }
+}
