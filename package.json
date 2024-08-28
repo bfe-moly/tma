@@ -1,23 +1,25 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "antd-mobile": "5.37.1",
-    "antd-mobile-icons": "^0.3.0",
     "@twa-dev/mark42": "0.0.38",
     "@twa-dev/sdk": "7.8.0",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
+    "antd-mobile": "5.37.1",
+    "antd-mobile-icons": "^0.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.0"
   },
   "devDependencies": {
     "@types/less": "^3.0.6",
+    "@types/node": "^22.5.1",
     "@umijs/mako": "0.8.0",
     "less": "4.2.0",
     "typescript": "5.5.4",
