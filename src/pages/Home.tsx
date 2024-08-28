@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import WebApp from '@twa-dev/sdk';
 import { useColorScheme, usePlatform, useTheme } from '@twa-dev/mark42';
 import { Button, Card, Space } from 'antd-mobile';
@@ -16,6 +16,12 @@ const Home = () => {
   const colorScheme = useColorScheme();
   const platform = usePlatform();
 
+  const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    setExpanded(WebApp.isExpanded);
+  });
+
   function toggleMainButton() {
     if (WebApp.MainButton.isVisible) {
       WebApp.MainButton.hide();
@@ -32,7 +38,7 @@ const Home = () => {
         {`width: ${window.innerWidth} x height: ${WebApp.viewportStableHeight}`}
       </div>
       <div id="viewport-params-expand">
-        {`Is Expanded: ${WebApp.isExpanded ? 'true' : 'false'}`}
+        {`Is Expanded: ${expanded ? 'true' : 'false'}`}
       </div>
 
       <Space direction="vertical" block>
