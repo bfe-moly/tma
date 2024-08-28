@@ -20,7 +20,13 @@ const Home = () => {
 
   useEffect(() => {
     setExpanded(WebApp.isExpanded);
-  });
+  }, []);
+
+  function setViewportData() {
+    setExpanded(WebApp.isExpanded);
+  }
+
+  WebApp.onEvent('viewportChanged', setViewportData);
 
   function toggleMainButton() {
     if (WebApp.MainButton.isVisible) {
