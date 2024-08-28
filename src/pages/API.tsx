@@ -1,6 +1,7 @@
 import WebApp from '@twa-dev/sdk';
 import { Button, Card, Space } from 'antd-mobile';
 import React from 'react';
+import OpenAppRoute from '../components/OpenAppRoute';
 
 function Api() {
   const showPopup = () => {
@@ -77,6 +78,9 @@ function Api() {
               </p>
             </li>
           </ul>
+        </Card>
+        <Card title='open app' headerStyle={{ color: '#000' }}>
+          <OpenAppRoute />
         </Card>
       </Space>
     </div>
