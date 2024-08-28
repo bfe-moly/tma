@@ -89,9 +89,9 @@ const OpenAppRoute: FC<OpenAppRouteProps> = () => {
     }
     return <div style={{ color: '#000' }}>
         <Space>
-            <Button color='success' onClick={() => openApp('bybitapp://open/recharge?coin=USDT')}>充值</Button>
-            <Button>按钮2</Button>
-            <Button>按钮3</Button>
+            <Button color='success' onClick={() => openApp('bybitapp://open/home?tab=2&symbol=BTCUSDT&page=trading')}>打开合约</Button>
+            <Button color='success' onClick={() => openApp('bybitapp://open/home?tab=3&symbol=BTCUSDT')}>打开现货</Button>
+            <Button color='success' onClick={() => openApp('by-mini://earn/discountBuy')}>打开小程序-折价买币</Button>
         </Space>
     </div>
 }
