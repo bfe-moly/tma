@@ -26,7 +26,11 @@ const Home = () => {
     setExpanded(WebApp.isExpanded);
   }
 
-  WebApp.onEvent('viewportChanged', setViewportData);
+  WebApp.onEvent('viewportChanged', () => {
+    console.log('1231');
+
+    setViewportData();
+  });
 
   function toggleMainButton() {
     if (WebApp.MainButton.isVisible) {
