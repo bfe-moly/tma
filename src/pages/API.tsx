@@ -24,7 +24,7 @@ function Api() {
 
   return (
     <div className="api-container">
-      <h1 className="tc my20">TG 示例小程序 - API demo</h1>
+      <h1 className="tc my20">API demo</h1>
 
       <Space direction="vertical" block>
         <Card title="弹窗类">

@@ -22,7 +22,7 @@ function Components() {
 
   return (
     <div className="componets-container">
-      <h1 className="tc my20">TG 示例小程序 - Components</h1>
+      <h1 className="tc my20">Components</h1>
 
       <Space direction="vertical" block>
         <Card title="avatar">
