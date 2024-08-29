@@ -1,16 +1,19 @@
 import { defineConfig } from 'vite';
 import fs from 'fs';
 import path from 'path';
-let key = ''
-let cert = ''
+let key = '';
+let cert = '';
 
 try {
-  key = fs.readFileSync(path.resolve(__dirname, 'local.tg.bybit.com-key.pem'))
-      cert= fs.readFileSync(path.resolve(__dirname, 'local.tg.bybit.com.pem'))
+  key = fs
+    .readFileSync(path.resolve(__dirname, 'local.tg.bybit.com-key.pem'))
+    .toString();
+  cert = fs
+    .readFileSync(path.resolve(__dirname, 'local.tg.bybit.com.pem'))
+    .toString();
 } catch (error) {
-  console.error('key 和 cert 不存在')
+  console.error('key 和 cert 不存在');
 }
-
 
 export default defineConfig({
   base: '/tma/',
