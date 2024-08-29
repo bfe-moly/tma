@@ -8,6 +8,7 @@ body {
   padding: 0;
   color-scheme: var(--tg-color-scheme);
 }
+
 .App {
   text-align: left;
   height: 100vh;
@@ -23,10 +24,12 @@ body {
   .container {
     padding: 20px 20px 50px 20px;
     flex: 1;
+
     h1 {
       padding-bottom: 20px;
     }
   }
+
   .bottom {
     flex: 0;
     border-top: solid 1px var(--adm-color-border);
@@ -53,6 +56,7 @@ body {
   transition: all 0.2s ease;
   z-index: 99;
 }
+
 #viewport:after {
   content: '';
   display: block;
@@ -63,12 +67,9 @@ body {
   bottom: 0;
   border-width: 4px;
   border-style: solid;
-  border-image: linear-gradient(
-      45deg,
+  border-image: linear-gradient(45deg,
       rgba(64, 224, 208, 0.5),
-      rgba(173, 255, 47, 0.5)
-    )
-    1;
+      rgba(173, 255, 47, 0.5)) 1;
 }
 
 #viewport-params-size,
@@ -83,9 +84,11 @@ body {
   padding: 4px;
   vertical-align: top;
 }
+
 #viewport-params-size {
   top: 4px;
 }
+
 #viewport-params-expand {
   top: 30px;
 }
@@ -96,4 +99,8 @@ body {
 
 .my20 {
   margin: 20px 0;
+}
+
+.by-login-reg-widget {
+  display: none !important;
 }
