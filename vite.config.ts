@@ -12,7 +12,7 @@ try {
     .readFileSync(path.resolve(__dirname, 'local.tg.bybit.com.pem'))
     .toString();
 } catch (error) {
-  console.error('key 和 cert 不存在');
+  console.error('Key 和 Cert 不存在', error);
 }
 
 export default defineConfig({
