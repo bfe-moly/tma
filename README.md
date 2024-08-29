@@ -12,21 +12,22 @@
 
 ## Usage
 
-1. mini app link: <https://t.me/a_three_body_bot/tma>
-2. web app link: <https://bfe-moly.github.io/tma/>
-3. telegram bot link: <https://t.me/a_three_body_bot>
+1. mini app direct link(prod): <https://t.me/a_three_body_bot/tma>
+2. mini app direct link(dev): <https://local.tg.bybit.com:3000/tma/>
+3. or launch app with telegram bot menu button: <https://t.me/a_three_body_bot>
+4. Deployment web URL: <https://bfe-moly.github.io/tma/>
 
 ## Development
 
 To install the application, use the following command:
 
-```
+```bash
 yarn install
 ```
 
 To run the development server, use the following command:
 
-```
+```bash
 yarn run dev
 ```
 
@@ -38,7 +39,7 @@ To deploy the application, use the following command:
 git push # to master
 ```
 
-once the master branch is updated, the application will be deployed automatically.
+once the master branch is updated, the application will be **deployed automatically**.
 
 ## Contributing
 
@@ -47,4 +48,3 @@ Contributions are welcome! Please fork the repository, make your changes, and su
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-

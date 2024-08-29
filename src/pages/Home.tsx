@@ -16,21 +16,23 @@ const Home = () => {
   const colorScheme = useColorScheme();
   const platform = usePlatform();
 
-  const [expanded, setExpanded] = useState(false);
-
-  useEffect(() => {
-    setExpanded(WebApp.isExpanded);
-  }, []);
-
   function setViewportData() {
-    setExpanded(WebApp.isExpanded);
+    const sizeEl = document.getElementById(
+      'viewport-params-size',
+    ) as HTMLElement;
+    sizeEl.innerText = `width: ${window.innerWidth} x height: ${WebApp.viewportStableHeight}`;
+
+    const expandEl = document.querySelector(
+      '#viewport-params-expand',
+    ) as HTMLElement;
+    expandEl.innerText = `Is Expanded: ${WebApp.isExpanded ? 'true' : 'false'}`;
   }
 
-  WebApp.onEvent('viewportChanged', () => {
-    console.log('1231');
+  WebApp.onEvent('viewportChanged', setViewportData);
 
+  useEffect(() => {
     setViewportData();
-  });
+  }, []);
 
   function toggleMainButton() {
     if (WebApp.MainButton.isVisible) {
@@ -44,12 +46,8 @@ const Home = () => {
     <div>
       <h1 className="tc my20">TG 示例小程序</h1>
       <div id="viewport"></div>
-      <div id="viewport-params-size">
-        {`width: ${window.innerWidth} x height: ${WebApp.viewportStableHeight}`}
-      </div>
-      <div id="viewport-params-expand">
-        {`Is Expanded: ${expanded ? 'true' : 'false'}`}
-      </div>
+      <div id="viewport-params-size"></div>
+      <div id="viewport-params-expand"></div>
 
       <Space direction="vertical" block>
         <Card title="BasicInfo">

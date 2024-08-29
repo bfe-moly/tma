@@ -16,38 +16,38 @@ function Api() {
       },
       function (btn) {
         if (btn === 'link') {
-          WebApp.openLink('https://google.com/');
+          WebApp.openLink('https://www.google.com/');
         }
-      }
+      },
     );
   };
 
   return (
-    <div className='api-container'>
-      <h1 className='tc my20'>TG 示例小程序 - API demo</h1>
+    <div className="api-container">
+      <h1 className="tc my20">TG 示例小程序 - API demo</h1>
 
-      <Space direction='vertical' block>
-        <Card title='弹窗类'>
-          <Space direction='vertical'>
+      <Space direction="vertical" block>
+        <Card title="弹窗类">
+          <Space direction="vertical">
             <Button
-              color='success'
+              color="success"
               onClick={() => {
                 WebApp.showAlert('Hello world!');
               }}
             >
               showAlert
             </Button>
-            <Button color='success' onClick={showPopup}>
+            <Button color="success" onClick={showPopup}>
               showPopup
             </Button>
           </Space>
         </Card>
 
-        <Card title='link 类'>
+        <Card title="link 类">
           <ul>
             <li>
               <p
-                className='links'
+                className="links"
                 onClick={() => {
                   WebApp.openTelegramLink('https://t.me/trendingapps');
                 }}
@@ -57,7 +57,7 @@ function Api() {
             </li>
             <li>
               <p
-                className='links'
+                className="links"
                 onClick={() => {
                   WebApp.openLink('https://google.com/');
                 }}
@@ -67,7 +67,7 @@ function Api() {
             </li>
             <li>
               <p
-                className='links'
+                className="links"
                 onClick={() => {
                   WebApp.openLink('https://telegra.ph/api', {
                     try_instant_view: true,
@@ -79,7 +79,7 @@ function Api() {
             </li>
           </ul>
         </Card>
-        <Card title='open app' headerStyle={{ color: '#000' }}>
+        <Card title="open app" headerStyle={{ color: '#000' }}>
           <OpenAppRoute />
         </Card>
       </Space>
