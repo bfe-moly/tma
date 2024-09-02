@@ -2,6 +2,23 @@ import React, { useEffect, useState } from 'react';
 import WebApp from '@twa-dev/sdk';
 import { useColorScheme, usePlatform, useTheme } from '@twa-dev/mark42';
 import { Button, Card, Space } from 'antd-mobile';
+import { WebAppInitData } from '@twa-dev/types';
+
+interface User {
+  id: number;
+  first_name: string;
+  last_name: string;
+  username: string;
+  language_code: string;
+  allows_write_to_pm: boolean;
+}
+interface UserInfo {
+  chat_instance: string;
+  chat_type: string;
+  auth_date: string;
+  hash: string;
+  user: User;
+}
 
 // Show main button
 WebApp.MainButton.setParams({
@@ -12,6 +29,7 @@ WebApp.MainButton.onClick(function () {
 });
 
 const Home = () => {
+  const [userInfo, setUserInfo] = useState<WebAppInitData>();
   const theme = useTheme();
   const colorScheme = useColorScheme();
   const platform = usePlatform();
@@ -42,6 +60,16 @@ const Home = () => {
     }
   }
 
+  const getUserInfo = () => {
+    const userInfo = WebApp.initDataUnsafe;
+    console.log('userInfo ', userInfo);
+    setUserInfo(userInfo);
+  };
+
+  useEffect(() => {
+    getUserInfo();
+  }, []);
+
   return (
     <div>
       <h1 className="tc my20">TG 示例小程序</h1>
@@ -56,6 +84,14 @@ const Home = () => {
             <p>colorScheme: {colorScheme}</p>
             <p>platform: {platform}</p>
             <p>version: {WebApp.version}</p>
+          </div>
+        </Card>
+        <Card title="UserInfo">
+          <div>
+            <p>auth_date: {userInfo?.auth_date}</p>
+            <p>chat_type: {userInfo?.chat_type}</p>
+            <p>hash: {userInfo?.hash.slice(0, 15) + '...'}</p>
+            <pre>{JSON.stringify(userInfo?.user, null, 2)}</pre>
           </div>
         </Card>
         <Card title="Buttons">
