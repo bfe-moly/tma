@@ -13,7 +13,7 @@
 ## Usage
 
 1. mini app direct link(prod): <https://t.me/a_three_body_bot/tma>
-2. mini app direct link(dev): <https://local.tg.bybit.com:3000/tma/>
+2. mini app direct link(dev): <https://t.me/a_three_body_bot/tma_dev>
 3. or launch app with telegram bot menu button: <https://t.me/a_three_body_bot>
 4. Deployment web URL: <https://bfe-moly.github.io/tma/>
 
@@ -29,6 +29,9 @@ To run the development server, use the following command:
 
 ```bash
 yarn run dev
+
+# 测试环境地址
+https://local.unify-test-1.bybit.com:3000/tma/
 ```
 
 ## Deployment

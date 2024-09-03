@@ -2,12 +2,12 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import '../assets/styles/global.less';
 
-function Layout() {
+const Layout: React.FC = () => {
   return (
-    <div className='layout'>
+    <div className="layout">
       <Outlet />
     </div>
   );
-}
+};
 
 export default Layout;

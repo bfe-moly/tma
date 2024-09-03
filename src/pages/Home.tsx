@@ -90,7 +90,7 @@ const Home = () => {
           <div>
             <p>auth_date: {userInfo?.auth_date}</p>
             <p>chat_type: {userInfo?.chat_type}</p>
-            <p>hash: {userInfo?.hash.slice(0, 15) + '...'}</p>
+            <p>hash: {userInfo?.hash?.slice(0, 15) + '...'}</p>
             <pre>{JSON.stringify(userInfo?.user, null, 2)}</pre>
           </div>
         </Card>
