@@ -12,5 +12,9 @@
         "*.ttml": "xml",
         "*.wxml": "ttml",
         "*.sk": "ttml"
+    },
+    "editor.formatOnSave": true,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
