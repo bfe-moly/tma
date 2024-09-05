@@ -37,7 +37,7 @@ export const Bottom: FC = () => {
     },
     {
       key: '/about',
-      title: '关于',
+      title: '我的',
       icon: <TeamOutline />,
     },
   ];

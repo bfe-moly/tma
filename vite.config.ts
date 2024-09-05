@@ -39,7 +39,7 @@ export default defineConfig({
           const port = typeof address === 'string' ? '' : address?.port;
           console.log(`Server is running at https://${host}:${port}/tma/`);
           console.log(
-            `Server is running at https://local.tg.bybit.com:${port}/tma/`,
+            `Server is running at https://local.unify-test-1.bybit.com:${port}/tma/`,
           );
         });
       },
