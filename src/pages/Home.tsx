@@ -4,22 +4,6 @@ import { useColorScheme, usePlatform, useTheme } from '@twa-dev/mark42';
 import { Button, Card, Space } from 'antd-mobile';
 import { WebAppInitData } from '@twa-dev/types';
 
-interface User {
-  id: number;
-  first_name: string;
-  last_name: string;
-  username: string;
-  language_code: string;
-  allows_write_to_pm: boolean;
-}
-interface UserInfo {
-  chat_instance: string;
-  chat_type: string;
-  auth_date: string;
-  hash: string;
-  user: User;
-}
-
 // Show main button
 WebApp.MainButton.setParams({
   text: 'Main Button',
@@ -63,6 +47,7 @@ const Home = () => {
   const getUserInfo = () => {
     const userInfo = WebApp.initDataUnsafe;
     console.log('userInfo ', userInfo);
+    console.log('photo_url ', userInfo.user?.photo_url);
     setUserInfo(userInfo);
   };
 
@@ -84,6 +69,7 @@ const Home = () => {
             <p>colorScheme: {colorScheme}</p>
             <p>platform: {platform}</p>
             <p>version: {WebApp.version}</p>
+            <p>UA: {navigator.userAgent}</p>
           </div>
         </Card>
         <Card title="UserInfo">
